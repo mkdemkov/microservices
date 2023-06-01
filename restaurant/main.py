@@ -6,8 +6,8 @@ from handlers.handlers import app_handlers
 
 load_dotenv()
 app = Flask(__name__)
-# app.config['SECRET_KEY'] = os.getenv('secret_key')  # Секретный ключ для генерации токена
+app.config['SECRET_KEY'] = os.getenv('secret_key')  # Секретный ключ для генерации токена
 app.register_blueprint(app_handlers)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=8080)
